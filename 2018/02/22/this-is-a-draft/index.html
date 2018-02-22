@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="markdown test HelloWorld," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="MarkDown草稿这是我第一次用markdown来写博客，之前的笔记都用的印象笔记，逼格挺高的，主要是有搜索功能，无论是作为备忘录，还是作为心得笔记本，都挺好用的。缺点大概就是排版成本太高了，除非走马克飞象。而且还有一点就是，我的垃圾笔记本同时跑印象笔记和git和HBuilder就会卡爆。这篇文章是直接在vim里面写的，逼格挺高，也挺难用的，主要还是自己命令记不住。   整理思路，记录思维闪光">
+<meta name="keywords" content="markdown test HelloWorld">
+<meta property="og:type" content="article">
+<meta property="og:title" content="this-is-a-draft">
+<meta property="og:url" content="http://yoursite.com/2018/02/22/this-is-a-draft/index.html">
+<meta property="og:site_name" content="JustCodeIt">
+<meta property="og:description" content="MarkDown草稿这是我第一次用markdown来写博客，之前的笔记都用的印象笔记，逼格挺高的，主要是有搜索功能，无论是作为备忘录，还是作为心得笔记本，都挺好用的。缺点大概就是排版成本太高了，除非走马克飞象。而且还有一点就是，我的垃圾笔记本同时跑印象笔记和git和HBuilder就会卡爆。这篇文章是直接在vim里面写的，逼格挺高，也挺难用的，主要还是自己命令记不住。   整理思路，记录思维闪光">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-22T14:58:22.437Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="this-is-a-draft">
+<meta name="twitter:description" content="MarkDown草稿这是我第一次用markdown来写博客，之前的笔记都用的印象笔记，逼格挺高的，主要是有搜索功能，无论是作为备忘录，还是作为心得笔记本，都挺好用的。缺点大概就是排版成本太高了，除非走马克飞象。而且还有一点就是，我的垃圾笔记本同时跑印象笔记和git和HBuilder就会卡爆。这篇文章是直接在vim里面写的，逼格挺高，也挺难用的，主要还是自己命令记不住。   整理思路，记录思维闪光">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/02/22/this-is-a-draft/"/>
+
+
+
+
+
+  <title>this-is-a-draft | JustCodeIt</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">JustCodeIt</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">积少成多</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/22/this-is-a-draft/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cc712">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JustCodeIt">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">this-is-a-draft</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-22T22:58:22+08:00">
+                2018-02-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="MarkDown草稿"><a href="#MarkDown草稿" class="headerlink" title="MarkDown草稿"></a>MarkDown草稿</h1><p>这是我第一次用markdown来写博客，之前的笔记都用的印象笔记，逼格挺高的，主要是有搜索功能，无论是作为备忘录，还是作为心得笔记本，都挺好用的。缺点大概就是排版成本太高了，除非走马克飞象。而且还有一点就是，我的垃圾笔记本同时跑印象笔记和git和HBuilder就会卡爆。<br>这篇文章是直接在<strong>vim</strong>里面写的，逼格挺高，也挺难用的，主要还是自己命令记不住。</p>
+<blockquote>
+<ul>
+<li>整理思路，记录思维闪光</li>
+<li>重复编码，做到Dont Repeat Yourself</li>
+<li>持续学习，终生学习</li>
+<li>多学多用</li>
+</ul>
+</blockquote>
+<p>！<a href="https://www.zybuluo.com/static/img/logo.png" target="_blank" rel="noopener">this-is-a-picture</a><br>我的<strong><a href="https://github/CC712" target="_blank" rel="noopener">github</a></strong>已经用了一年了，里面没有什么很高级的开源项目，自己也没有那个水平。但是本着刷commit的心态，一直在坚持更新自己的demo和练习。</p>
+<h2 id="这是第二个标题"><a href="#这是第二个标题" class="headerlink" title="这是第二个标题"></a>这是第二个标题</h2><blockquote>
+<p>标题栏下面可以有一个textarea，也可以使用一些icon之类的，<i class="icon-file"></i> <strong>File</strong>, 或者按键书写方法<code>Ctrl+Alt+F4</code>，</p>
+</blockquote>
+<h2 id="貌似空行或者分段是没有影响的。"><a href="#貌似空行或者分段是没有影响的。" class="headerlink" title="貌似空行或者分段是没有影响的。"></a>貌似空行或者分段是没有影响的。</h2><h3 id="1-需要有计划的写TodoList"><a href="#1-需要有计划的写TodoList" class="headerlink" title="1. 需要有计划的写TodoList"></a>1. 需要有计划的写TodoList</h3><ul>
+<li style="list-style: none"><input type="checkbox"> 今天还有事情没做</li>
+<li style="list-style: none"><input type="checkbox" checked> 已经做了的事情<h3 id="2-高亮一块代码"><a href="#2-高亮一块代码" class="headerlink" title="2. 高亮一块代码"></a>2. 高亮一块代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; component &#125; <span class="keyword">from</span> <span class="string">'React'</span> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Table</span> <span class="keyword">extends</span> <span class="title">component</span> </span>&#123;</span><br><span class="line">	<span class="keyword">let</span> t = <span class="keyword">new</span> Data.now()</span><br><span class="line">	render()&#123;</span><br><span class="line">		<span class="keyword">return</span> (&lt;div className = "table"&gt; &#123;t&#125; </span><br><span class="line">				&lt;p&gt; &#123;this.props.text_of_p&#125; &lt;/p&gt;</span><br><span class="line">			&lt;/div&gt;)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="3-write-a-table"><a href="#3-write-a-table" class="headerlink" title="3. write a table"></a>3. write a table</h3><table>
+<thead>
+<tr>
+<th>catagory</th>
+<th style="text-align:right">price</th>
+<th style="text-align:center">amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>computer</td>
+<td style="text-align:right">\$11</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td>phone</td>
+<td style="text-align:right">\$23</td>
+<td style="text-align:center">23</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<ul>
+<li>write in english is so convinient in vim because of the switch of notation is not neccesary.</li>
+</ul>
+</blockquote>
+<h3 id="4-end"><a href="#4-end" class="headerlink" title="4. end"></a>4. end</h3><p>大概所有的markdown 基本语句都在这个草稿里面了，我也不知道编译出来是什么样子。<br>markdown还有那种画流程图，输公式的那种高级功能，也不知道是不是原生特性，总之先这样吧，看看有没有bug。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/markdown-test-HelloWorld/" rel="tag"># markdown test HelloWorld</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/22/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">cc712</p>
+              <p class="site-description motion-element" itemprop="description">新手、前端、JavaScript</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MarkDown草稿"><span class="nav-number">1.</span> <span class="nav-text">MarkDown草稿</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#这是第二个标题"><span class="nav-number">1.1.</span> <span class="nav-text">这是第二个标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#貌似空行或者分段是没有影响的。"><span class="nav-number">1.2.</span> <span class="nav-text">貌似空行或者分段是没有影响的。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-需要有计划的写TodoList"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 需要有计划的写TodoList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-高亮一块代码"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 高亮一块代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-write-a-table"><span class="nav-number">1.2.3.</span> <span class="nav-text">3. write a table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-end"><span class="nav-number">1.2.4.</span> <span class="nav-text">4. end</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cc712</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
